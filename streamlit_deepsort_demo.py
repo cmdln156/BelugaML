@@ -21,7 +21,7 @@ FPS=30 #Videos are 30 frames per second
 
 INPUT_PATH="videos/"
 SELECT_VIDEO_PATH="videos_to_select/"
-filename=SELECT_VIDEO_PATH+"60ft_5x_H264.mp4" #Set default selected filename.
+filename=SELECT_VIDEO_PATH+"60ft_5x.mp4" #Set default selected filename.
 
 #Hide menu and "Made By Streamlit" at bottom of page.
 hide_streamlit_style = """
@@ -88,7 +88,7 @@ if (path.exists(INPUT_PATH+text_filename)):
     #Column 1 is the class and column 0 is the ID
     groups = df.groupby('Class')['ID'].nunique()
     st.write(groups)
-    if basename == "60ft_9x_H264.mp4":
+    if basename == "60ft_9x.mp4":
         st.write("(Although it may seem that there were only four kayaks and not five as the count indicates, the edge of another kayak appears for a fraction of a second at around the 19 second mark of the video on the right side of the screen.)")
     
     st.text("")
